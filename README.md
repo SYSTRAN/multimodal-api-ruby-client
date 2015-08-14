@@ -5,7 +5,7 @@ Systran Multimodal Ruby Client Library.
 Build
 -------------
 ```
-gem build nlpApiClient.gemspec
+gem build multimodalApiClient.gemspec
 ```
 
 
@@ -13,5 +13,5 @@ Test
 -------------
 ```
 bundle install
-rspec spec/nlpApiClient_spec.rb
+rspec spec/multimodalApiClient_spec.rb
 ```
