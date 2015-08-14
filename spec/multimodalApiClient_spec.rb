@@ -4,7 +4,7 @@ require_relative '../lib/multimodalApiClient'
 describe "MultimodalApiClient" do
   before :all do
     MultimodalApiClient::Swagger.configure do |configuration|
-      configuration.key = "8b287b9f-ced3-4d2b-b7fa-dad02fbea7f6"
+      configuration.key = "<API KEY HEREs>"
     end
 
   end
