@@ -7,7 +7,7 @@ module MultimodalApiClient
       def initialize
         @format = 'json'
         @scheme = 'https'
-        @host = 'platformapi-stag.systran.net:8904'
+        @host = 'platform.systran.net:8904'
         @base_path = '/'
         @user_agent = "ruby-swagger-#{Swagger::VERSION}"
         @inject_format = false

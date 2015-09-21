@@ -4,13 +4,24 @@ require_relative '../lib/multimodalApiClient'
 describe "MultimodalApiClient" do
   before :all do
     MultimodalApiClient::Swagger.configure do |configuration|
-      configuration.key = "<API KEY HEREs>"
+      configuration.host = "﻿https://platform.systran.net:8904"
+      if File.exists?("./key.txt")
+        key = File.read("./key.txt", :encoding => 'UTF-8')
+        if key.length > 0
+          configuration.key = key
+        else
+          puts "The key.txt file is empty"
+        end
+      else
+        puts"The key.txt file doesn't exists"
+      end
+
     end
 
   end
   describe "Configuration" do
     it "assures the user has a correct client configuration" do
-      expect(MultimodalApiClient::Swagger.configuration.key.length).to eq(36)
+      expect(MultimodalApiClient::Swagger.configuration.key.length).to be_between(10, 100)
     end
   end
   describe "MultimodalApi" do
