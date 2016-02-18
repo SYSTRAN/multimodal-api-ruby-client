@@ -4,7 +4,7 @@ require "multimodalApi_client/swagger/version"
 
 Gem::Specification.new do |s|
   s.name        = "MultimodalApiClient"
-  s.version     = MultimodalApiClient::Swagger::VERSION
+  s.version     = '1.0.2'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Systran"]
   s.email       = "support-professional@systransoft.com"
